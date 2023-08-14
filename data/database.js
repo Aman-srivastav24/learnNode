@@ -8,4 +8,5 @@ export const connectDB=()=>{mongoose.connect(process.env.MONGO_URI,{
     console.log("Server is Connected To DataBase!");
 }).catch((e)=>{
     console.log(e);
-});}
+});
+}
