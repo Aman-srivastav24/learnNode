@@ -8,7 +8,10 @@ export const app =express();
 config({
     path:"./data/config.env"
 })
+//Using middleware
 app.use(express.json());
+
+//Using Routes
 app.use("/users",userRouter);
 
 app.get("/",(req,res)=>{

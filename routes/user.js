@@ -1,18 +1,13 @@
 import express from 'express';
 import { User } from '../models/user.js';
-import { deleteUserById, getAllUsers, getUserById, register, specialFunc, updateUserById } from '../controllers/user.js';
+import {  getAllUsers, getUserById, login, register} from '../controllers/user.js';
 const router = express.Router();
 
 router.get("/api",getAllUsers);
 
 router.post("/new",register);
+router.post("/login",login);
 
-router.get("/userid/special",specialFunc);
-
-router.
- route("/userid/:id")
-.get(getUserById)
-.put(updateUserById)
-.delete(deleteUserById);
+router.route("/userid/:id").get(getUserById)
 
 export default router;
