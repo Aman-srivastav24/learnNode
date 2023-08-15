@@ -5,12 +5,12 @@ export const newTask = async(req,res,next)=>{
     await Task.create({
         title,description,
         user: req.user,
-    })
+    });
 
     res.status(201).json({
         success:true,
         message:"Task Added Successfully"
-    })
+    });
 }
 
 export const getMyTask = async (req,res,next)=>{
