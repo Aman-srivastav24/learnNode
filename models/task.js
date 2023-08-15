@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 //Creating Models
 const schema = new mongoose.Schema({
-    Title:{
+    title:{
     type:String,
     required:true,
 },

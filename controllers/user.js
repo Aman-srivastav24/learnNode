@@ -38,6 +38,20 @@ if(user)
 
 }
 
-export const getUserById =async(req,res)=>{}
+export const logout = (req,res)=>{
+    res.status(200)
+    .cookie("token","",{expires:new Date(Date.now())})
+    .json({
+        success:true,
+    })
+}
+
+export const getMyProfile =(req,res)=>{
+res.status(200).json({
+    success:true,
+    user:req.user,
+})
+     
+}
 
 
